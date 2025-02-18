@@ -1204,44 +1204,243 @@ ul{
     padding-left: 10px;
 }
 .Backup .time {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
 }
-.servers{
+.Backup .servers label,
+.Backup .servers i{
+    display: block;
+    cursor: pointer;
+}
+.Backup .servers i{
+    margin-bottom: 5px;
+}
+.Backup .servers{
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 20px;
     gap: 10px;
+    margin-top: 20px;
 }
 @media (max-width: 767px) {
-    .servers{
+    .Backup .servers{
         flex-direction: column;
     }
 }
-.servers .server{
+.Backup .servers .box{
+    width:100%;
+
+}
+.Backup .servers .box .server{
     width: 100%;
-    border-radius: 10px;
-    border: 2px solid #eee;
+    border: 1px solid #ccc;
     padding: 20px;
     position: relative;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.servers .server i{
-    display: block;
-    margin-bottom: 10px;
-}
-.servers .server label{
-   display: block; 
-   cursor: pointer;
-}
-.Backup .servers input[type="radio"]:checked + .server{
-    border: 2px solid var(--blue-color);
+.Backup .servers .box input:checked + .server{
+    border: 1px solid var(--blue-color);
     color: var(--blue-color);
 }
-.Backup .servers input{
+.Backup .servers .box input:checked + .server i{
+    color: var(--blue-color);
+}
+.Backup .servers .box input{
     appearance: none;
 }
+.profile-page{
+    margin: 50px 20px 0;
+}
+.profile-page label{
+    display: flex;
+}
+.profile-page .document{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .profile-page .document{
+        flex-direction: column;
+    }
+}
+.profile-page .document .avatar{
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    
+}
+.profile-page .document .avatar .text h2,
+.profile-page .document .avatar .text p,
+.profile-page .document .avatar .stars{
+    margin: 10px 0;
+}
+.profile-page .document .avatar .text h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.profile-page .document .avatar .text p{
+    color: var(--grey-color);
+}
+.profile-page .document .avatar .progress{
+    width: 70%;
+    height: 5px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.profile-page .document .avatar .progress span{
+    height: 100%;
+    width: 70%;
+    background-color: var(--blue-color);
+    position: absolute;
+    left: 0;
+}
+.profile-page .document .avatar .stars{
+    color: var(--orange-color);
+}
+.profile-page .document .rate{
+    color: var(--grey-color);
+    font-size: 14px;
+    word-spacing: -1.5px;
+}
+.profile-page .document .avatar img{
+    width: 120px;
+}
+.profile-page .document .info{
+    width: 100%;
+}
+.profile-page .document .info .box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    transition: 0.3s;
+}
+@media (max-width: 767px) {
+    .profile-page .document .info .box{
+        text-align: center;
+    }
+}
+.profile-page .document .info .box h4{
+    width: 100%;
+    margin: 0;
+    color: var(--grey-color);
+}
+.profile-page .document .info .box > div{
+    min-width: 250px;
+    padding: 10px 0 0;
+    font-size: 14px;
+}
+.profile-page .document .info .box:hover{
+    background-color: #f1f1f1ca;
+}
+.profile-page .document .info .box > div span{
+    color: var(--grey-color);
+    margin-right: 5px;
+}
+.profile-page .document .info .box > div p{
+    display: inline;
+}
+@media (max-width: 767px) {
+    .profile-page .info .toggle-switch {
+        margin: auto;
+    }
+}
+.profile-page .other-info{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+@media (max-width: 767px) {
+    .profile-page .other-info{
+        flex-direction: column;
+    }
+}
+.profile-page .other-info .skills{
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    flex-basis: 600px;
+}
+.profile-page .other-info .skills .intro h2{
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+.profile-page .other-info .skills .intro p{
+    margin: 0;
+    color: var(--grey-color);
+}
+.profile-page .other-info .skills .body{
+    margin-top: 25px;
+}
+.profile-page .other-info .skills .box{
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+.profile-page .other-info .skills .box span{
+    margin-right: 10px;
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-/* start animation */
+.profile-page .other-info .Activities{
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+}
+.profile-page .other-info .Activities .intro h2{
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+.profile-page .other-info .Activities .intro p{
+    margin: 0;
+    color: var(--grey-color);
+}
+.profile-page .other-info .Activities .body{
+    margin-top: 20px;
+}
+.profile-page .other-info .Activities .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding:  0 0 20px 0;
+    margin-bottom: 20px;
+}
+.profile-page .other-info .Activities .row .details{
+    display: flex;
+    align-items: center;
+}
+.profile-page .other-info .Activities .row .details img{
+    margin-right: 10px;
+    width: 70px;
+}
+.profile-page .Activities .row .details p{
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+.profile-page .Activities .row .details span{
+    color: var(--grey-color);
+}
+.profile-page .Activities .row .date p{
+    text-align: end;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.profile-page .Activities .row .date span{
+    color: var(--grey-color);
+}
 @keyframes light {
     0%{
         background-color: var(--blue-color);
